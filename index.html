@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de Recursos</title>
     <link rel="stylesheet" href="./css/index.css"/>
+    <link rel="icon" type="image/png" href="./img/icon.ico"/>
 </head>
 <body>
     
@@ -217,7 +218,7 @@ function VenderMuro(){
 }
 
 function Money(){
-    let Dinheiro = 5;
+    let Dinheiro = 25;
     Dinheiro = parseInt(Dinheiro);
 
     Dinheiro *= Mywork;
@@ -225,7 +226,7 @@ function Money(){
     output += Dinheiro;
     MostrarDados();
 }
-setInterval(Money, 120000);
+setInterval(Money, 60000);
 
 let Armymen = document.querySelector("#Centro");
 

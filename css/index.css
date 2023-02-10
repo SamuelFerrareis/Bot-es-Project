@@ -80,3 +80,15 @@ tr {
     width: 800px;
 }
 
+
+@media screen and (max-width: 320px) {
+    nav {
+        margin: 0px;
+    }
+    table {
+        border: 0px;
+    }
+    tr {
+        font-size: 13px;
+    }
+}
