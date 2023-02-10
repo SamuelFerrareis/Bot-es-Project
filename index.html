@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Recursos</title>
+    <link rel="stylesheet" href="./css/index.css"/>
+</head>
+<body>
+    
+    <header>
+        <div class="Center-1">
+            <nav>
+                <table border="1" width="100%">
+                    
+                    <tr>
+                        <th>Dinheiro</th>
+                        <th>Soldados</th>
+                        <th>Trabalhadores</th>
+                        <th>Barcos</th>
+                        <th>Muros</th>
+                    </tr>
+                    <tr>
+                        <th><div id="NumeroDi">10000</div></th>
+                        <th><div id="NumeroSo">64</div></th>
+                        <th><div id="NumeroTr">8</div></th>
+                        <th><div id="NumeroBa">0</div></th>
+                        <th><div id="NumeroMu">0</div></th>
+                    </tr>
+                </table>
+            </nav>
+            <div class="content">
+                <div class="Compra-Item">
+                    
+                    <img src="./img/barco1.png" id="imgs">
+                <div class="detalhes">
+                    <h2>Barco Grego</h2>
+                    <p>1000 Ouros <img src="./img/ouro1.png" id="ouro"></p>
+                    <button onclick="ComprarBarco()">Comprar</button>
+                    <button onclick="VenderBarco()">Vender</button>
+                </div>
+                </div>
+                <div class="Compra-Item">
+
+                    <img src="./img/soldado2.png" id="imgs">
+                <div class="detalhes">
+                    <h2>Soldado</h2>
+                    <p>100 Ouros <img src="./img/ouro1.png" id="ouro"></p>
+                    <button onclick="ComprarSoldado()">Comprar</button>
+                    <button onclick="VenderSoldado()">Vender</button>
+                </div>    
+                </div>
+                <div class="Compra-Item">
+                    <img src="./img/Trabalhador1.png" id="imgs">
+                    <div class="detalhes">
+                        <h2>Trabalhador</h2>
+                        <p>500 Ouros <img src="./img/ouro1.png" id="ouro"></p>
+                        <button onclick="ComprarTrabalhador()">Comprar</button>
+                        <button onclick="VenderTrabalhador()">Vender</button>
+                    </div>  
+                </div>
+                <div class="Compra-Item">
+                    <img src="./img/Muro1.png" id="imgs">
+                    <div class="detalhes">
+                        <h2>Muro</h2>
+                        <p>300 Ouros <img src="./img/ouro1.png" id="ouro"></p>
+                        <button onclick="ComprarMuro()">Comprar</button>
+                        <button onclick="VenderMuro()">Vender</button>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div id="Centro"><img id="Army1" src="./img/Exercito2.png">
+            <img id="Army2" src="./img/Exercito2.png"></div>
+    </section>
+<script>
+
+let NumeroDinheiro = document.querySelector("#NumeroDi");
+let output = 10000;
+output = parseInt(output);
+
+let precoB = 1000;
+precoB = parseInt(precoB);
+
+// Barcos
+
+let MyShips = 0;
+MyShips = parseInt(MyShips);
+
+let UnitShip = 1;
+UnitShip = parseInt(UnitShip);
+
+let NumeroBarcos = document.querySelector("#NumeroBa");
+
+let NumeroSoldado = document.querySelector("#NumeroSo");
+
+let MySoldados = 64;
+MySoldados = parseInt(MySoldados);
+
+let UnitSoldiers = 1;
+UnitSoldiers = parseInt(UnitSoldiers);
+
+let precoS = 100;
+precoS = parseInt(precoS);
+
+let NumeroTrabalhador = document.querySelector("#NumeroTr");
+
+let Mywork = 8;
+Mywork = parseInt(Mywork);
+
+let UnitWork = 1;
+UnitWork = parseInt(UnitWork);
+
+let precoT = 500;
+precoT = parseInt(precoT);
+
+let NumeroMuro = document.querySelector("#NumeroMu");
+
+let Mywall = 0;
+Mywall = parseInt(Mywall);
+
+let UnitWall = 1;
+UnitWall = parseInt(UnitWall);
+
+let precoM = 300;
+precoM = parseInt(precoM);
+
+function ComprarBarco(){
+    
+    if (output < 1000){
+        MostrarDados();
+    } else if(output >= 1000){
+        output -= precoB;
+        MyShips += UnitShip;
+        MostrarDados();
+    }
+}
+
+function VenderBarco(){
+
+    if( MyShips <= 0){
+        MostrarDados();
+    } else if (MyShips >= 1){
+        output += precoB;
+        MyShips -= UnitShip;
+    MostrarDados();
+    }
+}
+
+function ComprarSoldado(){
+
+    if (output < 100){
+        MostrarDados();
+    } else if(output >= 100){
+    output -= precoS;
+    MySoldados += UnitSoldiers;
+    MostrarDados();
+}
+}
+
+function VenderSoldado(){
+
+    if(MySoldados <= 0){
+        MostrarDados();
+    } else if(MySoldados >= 1){
+    output += precoS;
+    MySoldados -= UnitSoldiers;
+    MostrarDados();
+}
+}
+
+function ComprarTrabalhador(){
+
+    if(output < 500){
+        MostrarDados();
+    } else if(output >= 500){
+        output -= precoT;
+        Mywork += UnitWork;
+        MostrarDados();
+    }
+}
+
+function VenderTrabalhador(){
+
+    if(Mywork <= 0){
+        MostrarDados();
+    } else if (Mywork >= 1){
+    output += precoT;
+    Mywork -= UnitWork;
+    MostrarDados();
+}
+}
+
+function ComprarMuro(){
+
+    if(output < 300){
+        MostrarDados();
+    } else if(output >= 1){
+    output -= precoM;
+    Mywall += UnitWall;
+    MostrarDados();
+}
+}
+
+function VenderMuro(){
+
+    if(Mywall <= 0){
+        MostrarDados();
+    } else if (Mywall >= 1){
+    output += precoM;
+    Mywall -= UnitWall;
+    MostrarDados();
+}
+}
+
+function Money(){
+    let Dinheiro = 5;
+    Dinheiro = parseInt(Dinheiro);
+
+    Dinheiro *= Mywork;
+
+    output += Dinheiro;
+    MostrarDados();
+}
+setInterval(Money, 120000);
+
+let Armymen = document.querySelector("#Centro");
+
+function Army(){
+    if(MySoldados >= 112){
+         Armymen.style.display = "block";
+    } else if (MySoldados < 112){
+        Armymen.style.display = "none";
+    }
+}
+
+function MostrarDados() {
+    Army()
+    NumeroDinheiro.innerHTML = output;
+    NumeroBarcos.innerHTML = MyShips;
+    NumeroSoldado.innerHTML = MySoldados;
+    NumeroTrabalhador.innerHTML = Mywork;
+    NumeroMuro.innerHTML = Mywall;
+}
+
+</script>
+</body>
+</html>

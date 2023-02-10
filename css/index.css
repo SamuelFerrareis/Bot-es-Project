@@ -1,0 +1,82 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Mukta:wght@200;300;500;800&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Itim', cursive;
+    font-family: 'Mukta', sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 35px;
+}
+
+.center-1 {
+    width: 100%;
+}
+
+#imgs {
+    width: 300px;
+}
+
+#ouro {
+    width: 60px;
+}
+
+.detalhes {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    flex-wrap: nowrap;
+    align-content: center;
+    width: 400px;
+    background-color: #999898;
+}
+
+nav {
+    margin: 60px;
+}
+
+.Compra-Item {
+    width: 400px;
+    height: 350px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+table {
+    background-color: #57FF9A;
+    width: 100%;
+    border-style: inset;
+    border-width: 10px;
+}
+
+tr {
+    font-size: 25px;
+}
+
+#Centro {
+    text-align: center;
+    display: none;
+}
+
+#Army1, #Army2 {
+    width: 800px;
+}
+
