@@ -9,13 +9,19 @@
     box-sizing: border-box;
     outline: none;
     font-family: 'Itim', cursive;
-    font-family: 'Mukta', sans-serif;
+    font-family: cursive;
 }
 
 html,
 body {
   width: 100%;
   overflow-x: hidden;
+}
+
+body {
+    background-image: url("../img/fundo.png");
+    background-repeat: repeat;
+    color: black;
 }
 
 .content {
@@ -30,11 +36,12 @@ body {
 }
 
 #imgs {
-    width: 300px;
+    width: 200px;
 }
 
 #ouro {
     width: 60px;
+    margin-left: 10px;
 }
 
 .detalhes {
@@ -52,12 +59,13 @@ nav {
 }
 
 .Compra-Item {
-    width: 400px;
+    width: 415px;
     height: 350px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
     align-items: center;
+    margin-left: 10px;
 }
 
 table {
@@ -65,6 +73,11 @@ table {
     width: 100%;
     border-style: inset;
     border-width: 10px;
+}
+
+#table2 {
+    margin-top: 20px;
+    background-color: #47a5c3;
 }
 
 tr {
@@ -78,6 +91,45 @@ tr {
 
 #Army1, #Army2 {
     width: 800px;
+}
+
+#imgmi {
+    width: 200px;
+    height: 200px;
+}
+
+button {
+    font-size: 25px;
+    font-family: monospace;
+    margin: 5px;
+}
+
+#precodi {
+    display: flex;
+    align-items: center;
+    
+}
+
+p {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+#dinheirop {
+    width: 40px;
+    
+}
+
+/*#NumeroDi {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}*/
+
+#ajustes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 
