@@ -2,7 +2,7 @@
 
 
 let NumeroDinheiro = document.querySelector("#NumeroDi");
-let output = 1000;
+let output = 100000;
 output = parseInt(output);
 
 let precoB = 1000;
@@ -337,23 +337,23 @@ function Troncos() {
 }
 setInterval(Troncos, 30000);
 
-function MadeiraRef() {
-    let MRefinadas = 5;
+/* function MadeiraRef() {
+    let PrecoRef = 5;
+    PrecoRef = parseInt(PrecoRef);
+    let MRefinadas = 2;
     MRefinadas = parseInt(MRefinadas);
 
     if (Madeira < 5){
         MostrarDados();
     } else if (Madeira >= 5){
-        Madeira -= MRefinadas;
-        MRefinadas *= MyConstrutor;
-        MRefinada += MRefinadas;
+        PrecoRef *= MyConstrutor = Madeira; 
+        MRefinadas *= MyConstrutor = Refinada;
         MostrarDados();
     }
 
-    
-    MostrarDados();
 }
 setInterval(MadeiraRef, 30000);
+*/
 
 function BebidaProd() {
     let Bebidas = 5;

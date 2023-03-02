@@ -1,0 +1,147 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  
+  th,
+  td {
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Table 2nd column */
+  th:first-child,
+  td:first-child {
+    text-align: left;
+  }
+  
+  /* Items container */
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+  
+  /* Item container */
+  .Compra-Item {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    border-radius: 8px;
+  }
+  
+  /* Item image */
+  #imgs {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Item details */
+  .detalhes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .detalhes h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  #precodi {
+    display: flex;
+    align-items: center;
+  }
+  
+  #ouro {
+    width: 1.5rem;
+    height: auto;
+    margin-left: 0.5rem;
+  }
+  
+  /* Buttons */
+  button {
+    border: none;
+    background-color: #008CBA;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #005f7f;
+  }
+  
+  /* Media queries */
+  @media screen and (min-width: 768px) {
+    /* Tables */
+    table {
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+  
+    /* Items container */
+    .content {
+      margin: 2rem auto;
+    }
+  
+    /* Item container */
+    .Compra-Item {
+      width: calc(50% - 2rem);
+      margin: 1rem;
+    }
+  }
+  
